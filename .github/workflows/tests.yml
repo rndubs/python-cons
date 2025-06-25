@@ -39,6 +39,7 @@ jobs:
             - 'pyproject.toml'
             - 'setup.cfg'
             - 'requirements.txt'
+            - 'coverage.xml'
             - '.pre-commit-config.yaml'
 
   style:
