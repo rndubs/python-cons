@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=80.0.0", "versioneer[toml]"]
+requires = ["setuptools>=80.0.0", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,14 +7,12 @@ name = "cons"
 dynamic = ["version"]
 description = "An implementation of Lisp/Scheme-like cons in Python."
 readme = "README.md"
-license = {file = "LICENSE.txt"}
+license = { file = "LICENSE.txt" }
 authors = [
-    {name = "Brandon T. Willard", email = "brandonwillard+cons@gmail.com"}
+    { name = "Brandon T. Willard", email = "brandonwillard+cons@gmail.com" },
 ]
 requires-python = ">=3.9"
-dependencies = [
-    "logical-unification>=0.4.0"
-]
+dependencies = ["logical-unification>=0.4.0"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
@@ -40,11 +38,3 @@ test = ["pytest"]
 [tool.setuptools.packages.find]
 include = ["cons*"]
 exclude = ["tests*"]
-
-[tool.versioneer]
-VCS = "git"
-style = "pep440"
-versionfile_source = "cons/_version.py"
-versionfile_build = "cons/_version.py"
-tag_prefix = "v"
-parentdir_prefix = "cons-"
