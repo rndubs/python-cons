@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=80.0.0", "versioneer[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cons"
+dynamic = ["version"]
+description = "An implementation of Lisp/Scheme-like cons in Python."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+authors = [
+    {name = "Brandon T. Willard", email = "brandonwillard+cons@gmail.com"}
+]
+requires-python = ">=3.6"
+dependencies = [
+    "logical-unification>=0.4.0"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: DFSG approved",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://github.com/pythological/python-cons"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[tool.versioneer]
+VCS = "git"
+style = "pep440"
+versionfile_source = "cons/_version.py"
+versionfile_build = "cons/_version.py"
+tag_prefix = "v"
+parentdir_prefix = "cons-"
