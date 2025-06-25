@@ -34,5 +34,5 @@ repos:
           [
             "--in-place",
             "--remove-all-unused-imports",
-            "--remove-unused-variable",
+            "--remove-unused-variables",
           ]
