@@ -183,7 +183,7 @@ def test_car_cdr():
 
     z = car(cons(iter([]), 1))
     expected = iter([])
-    assert type(z) == type(expected)
+    assert type(z) is type(expected)
     assert list(z) == list(expected)
 
     li = iter([1])
