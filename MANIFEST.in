@@ -26,3 +26,5 @@ global-exclude Makefile
 global-exclude requirements.txt
 global-exclude .pre-commit-config.yaml
 global-exclude .pylintrc
+global-exclude .DS_Store
+global-exclude __pycache__
